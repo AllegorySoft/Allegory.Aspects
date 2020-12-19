@@ -1,13 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>AllegorySoft</Company>
+    <Authors>AllegorySoft</Authors>
+    <RepositoryUrl>https://github.com/AllegorySoft/Allegory.Aspects.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>Allegory.Aspects.Postsharp</Description>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Allegory.Aspects.Postsharp.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="AuthorizationAspects\" />
     <Folder Include="LogAspects\" />
     <Folder Include="TransactionAspects\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PostSharp" Version="6.8.6" />
   </ItemGroup>
 
 </Project>
