@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>AllegorySoft</Authors>
+    <Company>AllegorySoft</Company>
+    <Description>Allegory.Standart.Aspects.Postsharp</Description>
+    <PackageIcon>allegory.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/AllegorySoft/Allegory.Aspects.git</RepositoryUrl>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>Allegory.Standart.Aspects.Postsharp.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="allegory.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="LogAspects\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PostSharp" Version="6.8.6" />
+  </ItemGroup>
+
+</Project>

@@ -1,12 +1,10 @@
-﻿using PostSharp.Aspects;
-using PostSharp.Extensibility;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Security;
 using System.Security.Claims;
-using System.Text;
+using PostSharp.Aspects;
+using PostSharp.Extensibility;
 
-namespace Allegory.Aspects.Postsharp
+namespace Allegory.Standart.Aspects.Postsharp
 {
     [Serializable]
     [MulticastAttributeUsage(MulticastTargets.Method, AllowMultiple = false, TargetExternalMemberAttributes = MulticastAttributes.Instance)]
