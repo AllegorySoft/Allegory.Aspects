@@ -6,7 +6,7 @@ using System.Security;
 using System.Security.Claims;
 using System.Text;
 
-namespace Allegory.Aspects.Postsharp.AuthorizationAspects
+namespace Allegory.Aspects.Postsharp
 {
     [Serializable]
     [MulticastAttributeUsage(MulticastTargets.Method, AllowMultiple = false, TargetExternalMemberAttributes = MulticastAttributes.Instance)]
@@ -15,7 +15,7 @@ namespace Allegory.Aspects.Postsharp.AuthorizationAspects
         public string Roles { get; set; }
         public override void OnEntry(MethodExecutionArgs args)
         {
-            if (!ClaimsPrincipal.Current.Identity.IsAuthenticated)
+            if (!(ClaimsPrincipal.Current?.Identity.IsAuthenticated ?? false))
                 throw new SecurityException("Session not found");
 
             string[] roles = Roles?.Split(',');
